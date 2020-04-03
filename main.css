@@ -1,0 +1,305 @@
+
+/*
+.articlebox
+{
+    border:3px solid black;
+    
+    -webkit-animation : anime 4s infinite linear;
+    -moz-animation : anime 4s infinite linear;
+    animation : anime 4s infinite linear;
+}
+
+@-webkit-keyframes anime
+{
+    
+    from{-webkit-transform:perspective(0px) rotateY(0deg) translateX(0px);}
+    25%{-webkit-transform:perspective(150px) rotateY(-15deg) translateX(-50px);}
+    50%{-webkit-transform:perspective(300px) rotateY(-30deg) translateX(-70px);}
+    75%{-webkit-transform:perspective(150px) rotateY(-15deg)) translateX(-50px);}
+    to{-webkit-transform:perspective(0px) rotateY(0deg) translateX(0px);}
+}
+@-moz-keyframes anime
+{
+   
+    from{-moz-transform:perspective(0px) rotateY(0deg) translateX(0px);}
+    25%{-moz-transform:perspective(150px) rotateY(-15deg) translateX(-50px);}
+    50%{-moz-transform:perspective(300px) rotateY(-30deg) translateX(-70px);}
+    75%{-moz-transform:perspective(150px) rotateY(-15deg)) translateX(-50px);}
+    to{-moz-transform:perspective(0px) rotateY(0deg);}
+}
+@-o-keyframes anime
+{
+    from{transform:perspective(0px) rotateY(0deg) translateX(0px);}
+    25%{transform:perspective(150px) rotateY(-15deg) translateX(-50px);}
+    50%{transform:perspective(300px) rotateY(-30deg) translateX(-70px);}
+    75%{transform:perspective(150px) rotateY(-15deg)) translateX(-50px);}
+    to{transform:perspective(0px) rotateY(0deg) translateX(0px);}
+}
+@keyframes anime
+{
+    from{transform:perspective(0px) rotateY(0deg) translateX(0px);}
+    25%{transform:perspective(150px) rotateY(-15deg) translateX(-50px);}
+    50%{transform:perspective(300px) rotateY(-30deg) translateX(-70px);}
+    75%{transform:perspective(150px) rotateY(-15deg) translateX(-50px);}
+    to{transform:perspective(0px) rotateY(0deg) translateX(0px);}
+}
+*/
+
+.articlebox
+{
+    -webkit-transition: border 1s, opacity 1s,animation-play-state 0s;
+    -moz-transition: border 1s,opacity 1s,animation-play-state 0s;
+    -o-transition: border 1s,opacity 1s,animation-play-state 0s;
+    -transition: border 1s,opacity 1s,animation-play-state 0s;
+    
+    transition-duration:0.5s;
+    
+}
+
+.articlebox:hover
+{
+    opacity: 0.5;
+    border-color: aqua;
+    animation-play-state: paused;
+}
+
+.articlebox h4
+{
+    height: 60px;
+}
+
+.merry{
+    position:absolute;
+    left:50%; top:30px;
+    transform-style:preserve-3d;
+
+    animation:rint 15s infinite linear;
+    transition-duration:0.5s;
+     background-size:100% 100%;
+}
+
+
+@keyframes rint {
+    from {
+        transform:rotateY(-30deg);
+    }
+
+    to {
+        transform:rotateY(30deg);
+    }
+}
+
+#canvas{
+    position:relative;
+    margin-left: 200px;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    width:100%; height:200px;
+    perspective:1500px;perspective : 관점, 시각
+}
+
+.articlebox
+{
+    position:absolute;
+    padding: 150px;
+    transform-style:preserve-3d;
+}
+.articlebox:nth-child(1) { transform: rotateY(  0deg) translateZ(-370px); }
+.articlebox:nth-child(2) { transform: rotateY( 36deg) translateZ(-370px); }
+.articlebox:nth-child(3) { transform: rotateY( 72deg) translateZ(-370px); }
+.articlebox:nth-child(4) { transform: rotateY(108deg) translateZ(-370px); }
+.articlebox:nth-child(5) { transform: rotateY(144deg) translateZ(-370px); }
+.articlebox:nth-child(6) { transform: rotateY(180deg) translateZ(-370px); }
+.articlebox:nth-child(7) { transform: rotateY(216deg) translateZ(-370px); }
+.articlebox:nth-child(8) { transform: rotateY(252deg) translateZ(-370px); }
+
+
+
+
+@media print
+{
+	header
+	{
+		display: none;
+	}
+
+	footer
+	{
+		display: none;
+	}
+	nav
+	{
+		display: none;
+	}
+
+	
+}
+
+
+@media screen and (max-width:480px)
+{
+    .articlebox
+    {
+    	margin: 3px;
+        font-size:8px;
+        display: inline-block;
+        
+        
+        text-align: center;
+        
+        width: 60%;
+        height: 80%;
+        border: 2px solid black;
+        background-color: lightcyan;
+    	box-shadow: 3px 3px;
+        
+    } 
+    table
+    {
+        padding-left:0px;
+    }
+    
+    .descript
+    {
+		text-align: center;
+        
+		width: 100%;
+        height: 20%;
+	}
+	.fig
+	{
+        
+		width: 100px;
+        height: 150px;
+	}
+	nav
+	{
+		
+		position: relative;
+	  	left: 0px;
+	  	top: 0px;
+	 	width: auto;
+	 	display: inline;
+	}
+	section 
+	{
+	  
+	  margin-left: 0px;
+        padding: 0px;
+    text-align: center;
+	  
+	}
+	
+}
+@media screen and (min-width: 481px) and (max-width:800px)
+{
+    .articlebox
+    {
+    	font-size: 100%;
+        margin-left: 20%;
+        margin-bottom: 5%;
+        display: inline-block;
+        
+        text-align: center;
+        
+        width: 60%;
+        height: 80%;
+        border: 2px solid black;
+        background-color: pink;
+        box-shadow: 5px 5px;
+    } 
+    table
+    {
+        padding-left:0px;
+    }
+    
+    .descript
+    {
+		text-align: center;
+        
+		width: 100%;
+        height: 20%;
+	}
+    .fig
+	{
+		
+        width: 80%;
+        height: 60%;
+        
+	}
+	nav
+	{
+		margin-left: 5px; 
+		padding: 6px;
+		position: fixed;
+	  	left: 0px;
+	 	width: 180px;
+	 	border-style: ridge;
+	 	display: block;
+	}
+	section 
+	{
+	  
+	  margin-left: 200px;
+        padding: 10px;
+    text-align: center;
+	  
+	}
+	
+}
+@media screen and (min-width: 801px)
+{
+    .articlebox
+    {
+    	font-size: 100%;
+        margin-left: 10%;
+        margin-top: 5px;
+        margin-bottom: 5%;
+        display: inline-block;
+        
+        text-align: center;
+        
+        width: 140px;
+        height: 300px;
+        border: 2px solid black;
+        background-color: lightyellow;
+        box-shadow: 4px 4px;
+    } 
+    table
+    {
+        padding-left:0px;
+    }
+    
+    .descript
+    {
+		text-align: center;
+        
+		width: 100%;
+        height: 20%;
+	}
+    .fig
+	{
+		
+        width: 100%;
+        height: 1200%;
+        
+	}
+	nav
+	{
+		margin-left: 5px; 
+		padding: 6px;
+		position: fixed;
+	  	left: 0px;
+	 	width: 180px;
+	 	border-style: ridge;
+	 	display: block;
+	}
+    section 
+	{
+	  
+	  margin-left: 200px;
+	  padding: 30px;
+    text-align: center;
+	}
+    
+}
